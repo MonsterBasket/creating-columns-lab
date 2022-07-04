@@ -45,7 +45,16 @@ img:hover {
   box-shadow: -1px 1px #aa2222, -2px 2px #aa2222, -3px 3px #aa2222, -4px 4px #aa2222, -5px 5px #aa2222;
   background-color: #dd4444;
 }
-
-/* create a column class! make sure all of the divs within 'container's have a class of 'column' */
-
-/* create your tile classes! we recommend .small .med .large */
+.column{
+  display:inline-block;
+  width: 30%;
+}
+img{ /*saves me having to add class names to 10 of the images */
+  width:100%;
+}
+.med{
+  width: 203%; /* the extra 3% is for margin, since we can't know the exact image pixel width to add 4 pixels due to a scalable page, */
+}              /* this is as best as we can guess (I believe) */
+.large{
+ width: 309%; /* why 309% and not 306%? 203% is to cover the margin gap between two columns, but leave a gap between itself and the last column. */
+}             /* this needs to cover both margin gaps, and then leave NO extra margin to the edge of the third column. */
